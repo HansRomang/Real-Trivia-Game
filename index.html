@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
-	<script src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 
@@ -22,10 +22,21 @@
 		var wrong = 0;
 		var correct = 0;
 		var questionArray = ["is red a color?", "is blue a color?", "is yellow a color?"];
+		var questionIndex = 0;
+		$("#truebutton") = truebutton;
+
+		true = ($(this).attr(truebutton));
+
+		$("#falsebutton") = falsebutton;
+
+		wrong = ($(this).attr(falsebutton));
+
+		$("#button").on("click", function() {
+			
+			questionArray++;
+			questionArray[QuestionIndex];
+		});
 		
-//		$("#truebutton") = truebutton;
-
-
 
 
 		function CheckTime(){
@@ -36,19 +47,7 @@
 		setTimeout('document.quiz.submit()',1);
 		wrong++;
 		}
-		
-		
 
-		
-	//	on('click', function() {
-
-	// class 
-
-	
-
-	//		alert("You win!");
-	//	}
-		
 		else {
 		total_seconds = total_seconds -1;
 		c_minutes = parseInt(total_seconds/60);
