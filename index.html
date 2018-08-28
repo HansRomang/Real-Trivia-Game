@@ -10,11 +10,12 @@
 
 
 <body>
-		<h1>Javascript timer</h1>
+		<h1>Timer Quiz!</h1>
 		<div style="font-weight: bold" id="quiz-time-left"></div>
 
 		<button id="truebutton">true button</button>
 		<button id="falsebutton">false button</button>
+		<div id="questions"></div>
 		<script type="text/javascript">
 		var total_seconds = 60;
 		var c_minutes = parseInt(total_seconds/60);
@@ -22,14 +23,12 @@
 		var wrong = 0;
 		var correct = 0;
 		var questionArray = ["is red a color?", "is blue a color?", "is yellow a color?"];
-		var questionIndex = 0;
-
-
+		var questionIndex = $("<div>");
 
 
 		$("#button").on("click", function() {
-			if ("#truebutton"){
-				$("button").id;
+			console.log($("#button").id);
+			if ($("#truebutton").id = "truebutton"){
 				correct++;
 
 			};
