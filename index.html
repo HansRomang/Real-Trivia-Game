@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+
+
+<body>
+		<h1>Javascript timer</h1>
+		<div style="font-weight: bold" id="quiz-time-left"></div>
+
+		<button id="truebutton">true button</button>
+		<button id="falsebutton">false button</button>
+		<script type="text/javascript">
+		var total_seconds = 60;
+		var c_minutes = parseInt(total_seconds/60);
+		var c_seconds = parseInt(total_seconds%60);
+		var wrong = 0;
+		var correct = 0;
+		var questionArray = ["is red a color?", "is blue a color?", "is yellow a color?"]
+		//$("#truebutton") = truebutton;
+
+		//JQUERY NOT ADDED IN YET
+
+			var yes = document.createElement("button");
+			yes.innerText = 'Yes';
+			yes.setAttribute('')
+
+
+		function CheckTime(){
+		document.getElementById("quiz-time-left").innerHTML
+		= 'Time Left: ' + c_minutes + ' minutes ' + c_seconds + ' seconds ' ;
+		
+		if(total_seconds <=0){
+		setTimeout('document.quiz.submit()',1);
+		wrong++;
+		} 
+
+		
+	//	on('click', function() {
+
+	//		alert("You win!");
+	//	}
+		
+		else {
+		total_seconds = total_seconds -1;
+		c_minutes = parseInt(total_seconds/60);
+		c_seconds = parseInt(total_seconds%60);
+		setTimeout("CheckTime()",1000);
+		}}
+		setTimeout("CheckTime()",1000);
+		</script>
+		<form method="post" name="quiz" action="take_test.php" > </form>
+	
+</body>
+</html>
