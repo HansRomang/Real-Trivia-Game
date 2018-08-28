@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
+	<script src="jquery-3.3.1.min.js"></script>
 </head>
 
 
@@ -20,14 +21,11 @@
 		var c_seconds = parseInt(total_seconds%60);
 		var wrong = 0;
 		var correct = 0;
-		var questionArray = ["is red a color?", "is blue a color?", "is yellow a color?"]
-		//$("#truebutton") = truebutton;
+		var questionArray = ["is red a color?", "is blue a color?", "is yellow a color?"];
+		
+//		$("#truebutton") = truebutton;
 
-		//JQUERY NOT ADDED IN YET
 
-			var yes = document.createElement("button");
-			yes.innerText = 'Yes';
-			yes.setAttribute('')
 
 
 		function CheckTime(){
@@ -37,10 +35,16 @@
 		if(total_seconds <=0){
 		setTimeout('document.quiz.submit()',1);
 		wrong++;
-		} 
+		}
+		
+		
 
 		
 	//	on('click', function() {
+
+	// class 
+
+	
 
 	//		alert("You win!");
 	//	}
